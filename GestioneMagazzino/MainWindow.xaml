@@ -20,4 +20,5 @@
         <TextBox VerticalScrollBarVisibility="Auto" IsReadOnly="True" x:Name="txtCercato" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="139" Margin="210,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="345" FontSize="16"/>
         <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Cerca:" HorizontalAlignment="Left" Margin="45,145,0,0" VerticalAlignment="Top" Height="50" Width="145" FontSize="18"/>
     </Grid>
+    
 </Window>

@@ -68,6 +68,7 @@ namespace GestioneMagazzino
                     }
                 }
                 catch { }
+
         }
     }
 }
