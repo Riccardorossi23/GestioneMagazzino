@@ -25,20 +25,20 @@ namespace GestioneMagazzino
         {
             InitializeComponent();
         }
-        string file = "Negozio.txt";
+        string file = "Magazzino.txt";
 
         private void btnInserisci_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(file, true))
+                using (StreamWriter w= new StreamWriter(file, true))
                 {
                     string testo;
                     string prodotto = txtNomeProdotto.Text;
                     double prezzo = double.Parse(txtPrezzoProdotto.Text);
-                    testo = $"{prodotto}, {prezzo} €";
-                    writer.WriteLine(testo);
-                    writer.Flush();
+                    testo = $"{prodotto}: {prezzo} €";
+                    w.WriteLine(testo);
+                    w.Flush();
                 }
                 txtNomeProdotto.Clear();
                 txtPrezzoProdotto.Clear();
@@ -57,10 +57,10 @@ namespace GestioneMagazzino
                 {
                     txtCercato.Clear();
                     string nome = txtCerca.Text;
-                    using (StreamReader reader = new StreamReader(file))
+                    using (StreamReader r= new StreamReader(file))
                     {
                         string line;
-                        while ((line = reader.ReadLine()) != null)
+                        while ((line = r.ReadLine()) != null)
                         {
                             if (line.Contains(nome))
                                 txtCercato.Text += $"{line}\n";
